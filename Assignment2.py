@@ -1,3 +1,5 @@
+import this
+
 # Assignment 2 Banton, Amirah
 seperate = "--------------------------------------------------"
 
@@ -53,3 +55,32 @@ print(seperate)
 # 2-7 Stripping Names
 # I am gonna use my name still from the previous method for personal message name = "Amirah"
 print("This is my name stripped on the right " + name.rstrip() + "\n" + name.lstrip() + "\t" + name.strip())
+
+print(seperate)
+
+# 2-8 File Extensions
+
+filename = 'python_notes.txt'
+filename = filename.removesuffix('.txt')
+print(filename) # this prints the python_notes without the .txt.
+
+print(seperate)
+
+# 2-9 Number Eight
+print(5+3)
+print(10+2-4)
+print(4*2)
+print(20/2 -2)
+
+print(seperate)
+
+# 2-10 Favorite Number
+favorite_number = 14
+print(f"My favorite number so happens to be the date number I was born its {favorite_number} in which I was born November {favorite_number}th")
+
+print(seperate)
+
+# 2-11 Adding Comments
+# I have added comments throughout the assignment to describe which number was listed
+
+# 2-12 Import this ( The Zen of Python)
