@@ -21,3 +21,4 @@ seperate()
 # should have a capital letters
 # should have a lower case letter
 def password_check(password):
+    
