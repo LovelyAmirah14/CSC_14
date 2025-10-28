@@ -1,6 +1,7 @@
 # Assignment 6 Banton, Amirah
 seperate = "--------------------------------------------------"
 
+
 # 6-1 Person
 person = {
     "first_name": "Amirah",
