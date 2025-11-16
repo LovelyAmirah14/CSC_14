@@ -115,9 +115,162 @@ while True:
         try:
         songs_val = int(songs_in)
     except ValueError: print("Number of songs invalid, storing as unknown.")
-songs_val = None
-created = make_album(artist, title, songs=songs_val)
+        songs_val = None
+    created = make_album(artist, title, songs=songs_val)
 print("Created album dictionary:", created)
 print("Exiting album creator.")
+
+print(seperate)
+
+# 8-8 Messages
+def show_messages(messages):
+    for message in messages:
+        print(message)
+def send_messages(messages, sent_messages):
+    while messages:
+        current_message = messages.pop(0)
+        print(f"Sending message: {current_message}")
+        sent_messages.append(current_message)
+
+messages_list = ["Hello!", "How are you?", "Goodbye!"]
+sent_list = []  
+show_messages(messages_list[:])
+send_messages(messages_list, sent_list)
+print("Messages after sending:")
+show_messages(messages_list)
+print("Sent messages:")
+show_messages(sent_list)
+
+print(seperate)
+
+# 8-10 Sending Messages
+def send_messages(messages, sent_messages):
+    while messages:
+        current_message = messages.pop(0)
+        print(f"Sending message: {current_message}")
+        sent_messages.append(current_message)
+messages_list = ["Hello!", "How are you?", "Goodbye!"]
+sent_list = []  
+send_messages(messages_list[:], sent_list)
+print("Messages after sending:")
+for message in messages_list:
+    print(message)
+print("Sent messages:")
+for message in sent_list:
+    print(message)
+
+print(seperate)
+
+# 8-11 Archived Messages
+def send_messages(messages, sent_messages):
+    while messages:
+        current_message = messages.pop(0)
+        print(f"Sending message: {current_message}")
+        sent_messages.append(current_message)
+messages_list = ["Hello!", "How are you?", "Goodbye!"]
+sent_list = []  
+send_messages(messages_list[:], sent_list)
+print("Messages after sending:")
+for message in messages_list:
+    print(message)
+print("Sent messages:")
+for message in sent_list:
+    print(message)
+
+print(seperate)
+
+# 8-12 Sandwiches
+def make_sandwich(*ingredients):
+    print("Making a sandwich with the following ingredients:")
+    for ingredient in ingredients:
+        print(f"- {ingredient}")
+make_sandwich("turkey", "lettuce", "tomato")
+make_sandwich("peanut butter", "jelly")
+make_sandwich("ham", "cheese", "mustard", "pickles")
+
+print(seperate)
+
+# 8-13 User Profile
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first.title()
+    profile['last_name'] = last.title()
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+user_profile = build_profile('amirah', 'banton', location='new york', field='computer science')
+print("User Profile:")
+for key, value in user_profile.items():
+    print(f"{key}: {value}")
+
+print(seperate)
+
+# 8-14 Cars
+def make_car(manufacturer, model, **options):
+    car = {}
+    car['manufacturer'] = manufacturer.title()
+    car['model'] = model.title()
+    for key, value in options.items():
+        car[key] = value
+    return car
+car1 = make_car('subaru', 'outback', color='blue', tow_package=True)
+car2 = make_car('tesla', 'model s', color='red', autopilot=True)
+print("Car 1:")
+for key, value in car1.items():
+    print(f"{key}: {value}")
+print("\nCar 2:")
+for key, value in car2.items():
+    print(f"{key}: {value}")
+
+print(seperate)
+
+# 8-15 Printing Models
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printing model: {current_design}")
+        completed_models.append(current_design)
+unprinted = ['phone case', 'robot pendant', 'dodecahedron']
+completed = []
+print_models(unprinted[:], completed)
+print("Unprinted designs after function call:")
+for design in unprinted:
+    print(design)
+print("Completed models:")
+for model in completed:
+    print(model)
+
+print(seperate)
+
+# 8-16 Imports
+# This would normally be in a separate file named pizza.py
+def make_pizza(size, *toppings):
+    print(f"\nMaking a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+# In the main file
+make_pizza(16, 'pepperoni', 'mushrooms', 'green peppers')
+make_pizza(12, 'extra cheese')  
+
+print(seperate)
+
+# 8-17 Styling Functions
+# This would normally be in a separate file named styling.py
+def show_magicians(magicians):
+    for magician in magicians:
+        print(magician)
+def make_great(magicians):
+    for i in range(len(magicians)):
+        magicians[i] = "The Great " + magicians[i]
+# In the main file
+magician_names = ['alice', 'bob', 'carol']
+print("Original magicians:")
+show_magicians(magician_names)
+great_magicians = magician_names[:]
+make_great(great_magicians)
+print("\nGreat magicians:")
+show_magicians(great_magicians)
+print("\nOriginal magicians after make_great call:")
+show_magicians(magician_names)
 
 print(seperate)
