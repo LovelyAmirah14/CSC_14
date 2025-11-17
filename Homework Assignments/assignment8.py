@@ -274,3 +274,5 @@ print("\nOriginal magicians after make_great call:")
 show_magicians(magician_names)
 
 print(seperate)
+
+# End of assignment 8
